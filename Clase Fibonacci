@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Fibonacci {
+	List <Integer> fibonacci = new ArrayList <Integer>();
+	
+	
+	public Fibonacci() {
+		fibonacci.add(0);
+		fibonacci.add(1);
+		for(int i = 1; i > 0; i++) {
+			int valor = fibonacci.get(i-1) + fibonacci.get(i);
+			fibonacci.add(valor);
+			if(valor > 1000000) {
+				break;
+			}
+		}
+	}
+	
+	public List <Integer> GetList() {
+		return fibonacci;
+	}
+	
+}
